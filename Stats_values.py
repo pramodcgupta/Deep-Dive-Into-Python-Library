@@ -1,8 +1,7 @@
 import numpy as np
 from scipy import stats
 
-def getInput():
-
+def stats_values():
     lst = []
 
     # number of elements as input
@@ -14,11 +13,8 @@ def getInput():
 
         lst.append(ele)
 
-    arr=np.array(lst)
+    arr = np.array(lst)
 
-    return arr
-
-def stats_values(arr):
     # Calculate the mean
     mean = round(np.mean(arr), 2)
 
@@ -43,16 +39,17 @@ def stats_values(arr):
     Q3 = np.percentile(arr, 75, interpolation='midpoint')
 
     # Interquaritle range (IQR)
-    IQR = round(Q3 - Q1,2)
+    IQR = round((Q3 - Q1),2)
 
-    ## Print Descriptive statistics
-    print('Mean: ', str(mean))
-    print('median: ', str(median))
-    print('std: ', str(std))
-    print('variance: ', str(var))
-    print('mode: ', str(mode))
-    print('Interquaritle: ', str(IQR))
+    return mean, median,std, var,mode, IQR
 
 if __name__ == "__main__":
-    arr=getInput()
-    stats_values(arr)
+    mean, median,std, var,mode, IQR = stats_values()
+    ## Print Descriptive statistics
+    print(mean)
+    print(median)
+    print(std)
+    print(var)
+    print(mode)
+    print(IQR)
+
