@@ -5,7 +5,7 @@ def stats_values():
     lst = []
 
     # number of elements as input
-    n = int(input(' '))
+    n = int(input())
 
     # iterating till the range
     for i in range(0, n):
