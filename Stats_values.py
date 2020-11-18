@@ -33,10 +33,10 @@ def stats_values():
 
 
     # First quartile (Q1)
-    Q1 = np.percentile(arr, 25, interpolation='midpoint')
+    Q1 = np.percentile(arr, 25)
 
     # Third quartile (Q3)
-    Q3 = np.percentile(arr, 75, interpolation='midpoint')
+    Q3 = np.percentile(arr, 75)
 
     # Interquaritle range (IQR)
     IQR = round((Q3 - Q1),2)
